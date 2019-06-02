@@ -2,9 +2,9 @@
 # coding: utf-8
 
 #################################################
-# description:  take a website and run it through the tools.
+# description:  
 # references:
-        # github.guacamole: https://github.com/berkgoksel/guacamole
+        # 
 #################################################
 
 # import libraries
@@ -85,6 +85,7 @@ def test_verification( list_functions = [], verbose = False):
 
 if __name__ == "__main__":
     start = time.time()
+    
     input_trials = {
         "none": [None],
         "boolean": [True, False],
@@ -94,14 +95,15 @@ if __name__ == "__main__":
         "list": [["test_1",0],[None,0],["test_1", None],[],[0]],
         "dict": [{"test_1":0},{None:0},{"test_1":None}]
     }
-    list_functions, list_exceptions = find.find_testable("/../src/local/")
-    
-    #pprint.pprint(list_functions)
-    list_functions = list_functions[:]
     list_trials = [] # all the options you want to try
     for each in input_trials.keys():
         list_trials += input_trials[each]
     list_trials = list_trials[:4]
+    
+    list_functions, list_exceptions = find.find_testable("/../src/local/")
+    
+    #pprint.pprint(list_functions)
+    list_functions = list_functions[:]
     list_functions = test_verification(list_functions, True)
     pprint.pprint(list_functions)
     print(time.time()-start)
