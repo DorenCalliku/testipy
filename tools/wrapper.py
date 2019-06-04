@@ -47,7 +47,8 @@ def timeout(seconds = 120, error_message = os.strerror(errno.ETIME)):
     return decorator
 
 
-def wrapper(method_name = "__default", positional_arguments = [], keyword_arguments = None, run_time = 120):
+def wrapper(method_name = "__default", positional_arguments = [], \
+            keyword_arguments = None, spinner = False, run_time = 120, verbose = False):
     """Checks for each method.
     1) Does it throw an exception?
     2) Does it pass the timing for a normal function?
@@ -68,21 +69,28 @@ def wrapper(method_name = "__default", positional_arguments = [], keyword_argume
     # check timing functionalities
     timing = timeout( run_time)
     func   = timing( method_name)
-    #try:   
-    with Spinner():
-     # check the timing of running the method
-        if keyword_arguments:
-            return func(*positional_arguments, **keyword_arguments)
-        else: 
-            return func(*positional_arguments)
-    """
-    #except (BrokenPipeError, IOError):
-        print ('BrokenPipeError caught', file = sys.stderr)
+    try:  
+        if spinner:
+            with Spinner():
+            # check the timing of running the method
+                if keyword_arguments:
+                    return func(*positional_arguments, **keyword_arguments)
+                else: 
+                    return func(*positional_arguments)
+        else:
+            if keyword_arguments:
+                return func(*positional_arguments, **keyword_arguments)
+            else: 
+                return func(*positional_arguments)
+
+    except (BrokenPipeError, IOError):
+        if verbose:
+            print ('BrokenPipeError caught', file = sys.stderr)
         return None
-    #except Exception:
-        print("Exception at "+ str(method_name))
+    except Exception:
+        if verbose:
+            print("Exception at "+ str(method_name))
         return None
-    """
 
 class Spinner:
     """For keeping the user focused."""
@@ -123,7 +131,6 @@ def adder( a= 4, b = 5):
     
     #time.sleep(sleep)
     #print("Checker Method")
-    a = a[0] + a[1] + a[2]
     return a + b
     
 if __name__ == "__main__":

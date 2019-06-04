@@ -1,0 +1,272 @@
+[
+    {
+        "arguments": [
+            [
+                "sleep",
+                "a",
+                "b"
+            ],
+            null,
+            null,
+            [
+                10,
+                4,
+                5
+            ],
+            [],
+            null,
+            {}
+        ],
+        "location": "/home/doren/Desktop/guacamole/src/local/",
+        "method_name": "adder",
+        "valid": true,
+        "validation_file": "home_doren_Desktop_guacamole_src_local_adder.json"
+    },
+    {
+        "arguments": [
+            [
+                "seconds",
+                "error_message"
+            ],
+            null,
+            null,
+            [
+                120,
+                "Timer expired"
+            ],
+            [],
+            null,
+            {}
+        ],
+        "location": "/home/doren/Desktop/guacamole/src/local/",
+        "method_name": "timeout",
+        "valid": false,
+        "validation_file": "home_doren_Desktop_guacamole_src_local_timeout.json"
+    },
+    {
+        "arguments": [
+            [
+                "method_name",
+                "positional_arguments",
+                "keyword_arguments",
+                "run_time"
+            ],
+            null,
+            null,
+            [
+                "__default",
+                [],
+                null,
+                120
+            ],
+            [],
+            null,
+            {}
+        ],
+        "location": "/home/doren/Desktop/guacamole/src/local/",
+        "method_name": "wrapper",
+        "valid": false,
+        "validation_file": "home_doren_Desktop_guacamole_src_local_wrapper.json"
+    },
+    {
+        "arguments": [
+            [
+                "wrapped",
+                "assigned",
+                "updated"
+            ],
+            null,
+            null,
+            [
+                [
+                    "__module__",
+                    "__name__",
+                    "__qualname__",
+                    "__doc__",
+                    "__annotations__"
+                ],
+                [
+                    "__dict__"
+                ]
+            ],
+            [],
+            null,
+            {}
+        ],
+        "location": "/home/doren/Desktop/guacamole/src/local/",
+        "method_name": "wraps",
+        "valid": false,
+        "validation_file": "home_doren_Desktop_guacamole_src_local_wraps.json"
+    },
+    {
+        "arguments": [
+            [
+                "website",
+                "size"
+            ],
+            null,
+            null,
+            [
+                150
+            ],
+            [],
+            null,
+            {}
+        ],
+        "location": "/home/doren/Desktop/guacamole/src/local/",
+        "method_name": "check_harvester",
+        "valid": false,
+        "validation_file": "home_doren_Desktop_guacamole_src_local_check_harvester.json"
+    },
+    {
+        "arguments": [
+            [
+                "ip"
+            ],
+            null,
+            null,
+            null,
+            [],
+            null,
+            {}
+        ],
+        "location": "/home/doren/Desktop/guacamole/src/local/",
+        "method_name": "check_shodan",
+        "valid": false,
+        "validation_file": "home_doren_Desktop_guacamole_src_local_check_shodan.json"
+    },
+    {
+        "arguments": [
+            [
+                "line"
+            ],
+            null,
+            null,
+            null,
+            [],
+            null,
+            {}
+        ],
+        "location": "/home/doren/Desktop/guacamole/src/local/",
+        "method_name": "escape_ansi",
+        "valid": false,
+        "validation_file": "home_doren_Desktop_guacamole_src_local_escape_ansi.json"
+    },
+    {
+        "arguments": [
+            [
+                "ip"
+            ],
+            null,
+            null,
+            null,
+            [],
+            null,
+            {}
+        ],
+        "location": "/home/doren/Desktop/guacamole/src/local/",
+        "method_name": "run_nmap",
+        "valid": false,
+        "validation_file": "home_doren_Desktop_guacamole_src_local_run_nmap.json"
+    },
+    {
+        "arguments": [
+            [
+                "website"
+            ],
+            null,
+            null,
+            null,
+            [],
+            null,
+            {}
+        ],
+        "location": "/home/doren/Desktop/guacamole/src/local/",
+        "method_name": "sublist",
+        "valid": false,
+        "validation_file": "home_doren_Desktop_guacamole_src_local_sublist.json"
+    },
+    {
+        "arguments": [
+            [
+                "ip",
+                "text"
+            ],
+            null,
+            null,
+            [
+                "8.8.8.8",
+                "../../results/reverse_lookup.txt"
+            ],
+            [],
+            null,
+            {}
+        ],
+        "location": "/home/doren/Desktop/guacamole/src/local/",
+        "method_name": "bing_lookup",
+        "valid": false,
+        "validation_file": "home_doren_Desktop_guacamole_src_local_bing_lookup.json"
+    },
+    {
+        "arguments": [
+            [
+                "website",
+                "count",
+                "store"
+            ],
+            null,
+            null,
+            [
+                "www.google.com.tr",
+                10,
+                ""
+            ],
+            [],
+            null,
+            {}
+        ],
+        "location": "/home/doren/Desktop/guacamole/src/local/",
+        "method_name": "bing_search_file",
+        "valid": false,
+        "validation_file": "home_doren_Desktop_guacamole_src_local_bing_search_file.json"
+    },
+    {
+        "arguments": [
+            [
+                "search",
+                "count"
+            ],
+            null,
+            null,
+            [
+                10
+            ],
+            [],
+            null,
+            {}
+        ],
+        "location": "/home/doren/Desktop/guacamole/src/local/",
+        "method_name": "bing_web_search",
+        "valid": false,
+        "validation_file": "home_doren_Desktop_guacamole_src_local_bing_web_search.json"
+    },
+    {
+        "arguments": [
+            [
+                "ip"
+            ],
+            null,
+            null,
+            [
+                "8.8.8.8"
+            ],
+            [],
+            null,
+            {}
+        ],
+        "location": "/home/doren/Desktop/guacamole/src/local/",
+        "method_name": "reverse_ip_lookup",
+        "valid": false,
+        "validation_file": "home_doren_Desktop_guacamole_src_local_reverse_ip_lookup.json"
+    }
+]
