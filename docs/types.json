@@ -1,0 +1,9 @@
+{
+"none": [None],
+"boolean": [True, False]
+"numbers": [-1,0, 1.1, 100, 1.0j,1.0L ],
+"string":  ["testing", u"testing"],
+"tuple": [("test_1",0), (None,0 ), ("test", None)],
+"list": [["test_1",0],[None,0],["test_1", None]],
+"dict": [{"test_1":0},{None:0},{"test_1":None}]
+}
